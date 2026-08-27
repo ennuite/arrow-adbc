@@ -21,7 +21,7 @@ const versions = `
 20;20
 21;21
 22;22
-main;23 (dev)
+main;25 (dev)
 current;22 (current)
 `;
 // Licensed to the Apache Software Foundation (ASF) under one
@@ -79,7 +79,7 @@ function adbcInjectVersionSwitcher() {
             try {
                 let relativePart = window.location.pathname.replace(/^\//, "");
                 // Remove the adbc/ prefix
-                relativePart = relativePart.replace(/^adbc[^\/]+\//, "");
+                relativePart = relativePart.replace(/^adbc\//, "");
                 // Remove the version number
                 relativePart = relativePart.replace(/^[^\/]+\//, "");
                 const newUrl = `${el.getAttribute("href")}/${relativePart}`;
